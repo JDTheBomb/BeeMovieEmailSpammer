@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <h1>Bee Movie Spammer</h1>
+    <label>Spam:</label><input type="text" id="testSubject">
+
+    <button id="emailSpamBtn">Spam Email</button>
+    <p id="notify"></p>
+
+    <script>
+    document.getElementById("emailSpamBtn").addEventListener("click", emailSomeone);
+    
+    function emailSomeone(){
+    document.getElementById("notify").innerHTML = "Working";
+    var testSubject = document.getElementById("testSubject").value;
+    google.script.run.spamEmail(testSubject);
+    };
+    </script>
+  </body>
+</html>
